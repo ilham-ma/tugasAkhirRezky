@@ -20,4 +20,4 @@ def hello_world():
 
 if __name__ == "__main__":
     X_train, X_test, y_train, y_test = training()
-    app.run(debug=True,host='0.0.0.0')
+    app.run(host="0.0.0.0", port=8080, debug=True, threaded=True)
