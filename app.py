@@ -20,4 +20,4 @@ def hello_world():
 
 if __name__ == "__main__":
     X_train, X_test, y_train, y_test = training()
-    app.run('127.0.0.1', '5000')
+    app.run(debug=True,host='0.0.0.0')
