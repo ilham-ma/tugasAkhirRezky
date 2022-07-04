@@ -17,6 +17,10 @@ def hello_world():
 
     return str(result)
 
+@app.route("/")
+def root():
+    return "<p>Hello, World!</p>"
+
 
 if __name__ == "__main__":
     X_train, X_test, y_train, y_test = training()
