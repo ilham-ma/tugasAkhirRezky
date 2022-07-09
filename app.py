@@ -8,7 +8,7 @@ from machine_learning.model import run_model
 
 app = Flask('app')
 
-@app.route("/rezky", methods=['POST'])
+@app.route("/", methods=['POST'])
 def hello_world():
     response = json.loads(request.data)
     arrayStr = response['array'].split(',')
@@ -17,11 +17,11 @@ def hello_world():
 
     return str(result)
 
-@app.route("/")
+@app.route("/", methods=['GET'])
 def root():
     return "<p>Hello, World!</p>"
 
 
 if __name__ == "__main__":
     X_train, X_test, y_train, y_test = training()
-    app.run(host="0.0.0.0", port=8080, debug=True, threaded=True)
+    app.run(host="0.0.0.0", port=5000, debug=True, threaded=True)
