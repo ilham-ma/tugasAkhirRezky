@@ -1,1 +1,1 @@
-web: pip install Flask && pip install pandas && pip install scikit-learn && python3 app.py
+web: python3 app.py
