@@ -17,11 +17,11 @@ def hello_world():
 
     return str(result)
 
-@app.route("/", methods=['GET'])
+@app.route("/")
 def root():
     return "<p>Hello, World!</p>"
 
 
 if __name__ == "__main__":
     X_train, X_test, y_train, y_test = training()
-    app.run(host="0.0.0.0", port=5000, debug=True, threaded=True)
+    app.run(host="0.0.0.0", port=5000)
