@@ -1,2 +1,1 @@
-web: pip install -r requirements.txt
-web: python3 app.py
+web: pip install Flask && pip install pandas && pip install scikit-learn && python3 app.py
